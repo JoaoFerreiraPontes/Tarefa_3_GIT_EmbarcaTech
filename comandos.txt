@@ -1,0 +1,33 @@
+mkdir tarefa_3_git
+cd tarefa_3_git
+git init
+echo "Conteúdo do arquivo 1" > arquivo1.txt
+echo "Informação no arquivo 2" > arquivo2.txt
+echo "Terceiro arquivo aqui" > arquivo3.txt
+git add arquivo1.txt arquivo2.txt arquivo3.txt
+git commit -m "Commit inicial: Adiciona três arquivos de texto"
+echo "Conteúdo do arquivo 1 foi modificado" >> arquivo1.txt
+echo "Informação adicional no arquivo 2" >> arquivo2.txt
+git status
+git diff
+git add arquivo1.txt arquivo2.txt
+git commit -m "Modifica arquivo1 e arquivo2"
+git log
+git log --oneline
+git log --graph --oneline --decorate --all
+git log --stat
+git revert HEAD --no-edit
+echo "Modificação temporária no arquivo 3" >> arquivo3.txt
+git status
+git stash
+git status
+git stash pop
+git status
+git add arquivo3.txt
+git commit -m "Aplica modificação temporária do arquivo3"
+git reflog
+git log --oneline
+git tag -a v1.0 b31f418 -m "Versão 1.0 estável - Commit inicial"
+git tag
+git show v1.0
+# Os comandos git add e git commit para este arquivo virão a seguir
