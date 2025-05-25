@@ -31,3 +31,19 @@ git tag -a v1.0 b31f418 -m "Versão 1.0 estável - Commit inicial"
 git tag
 git show v1.0
 # Os comandos git add e git commit para este arquivo virão a seguir
+# Tentativa inicial de push que foi rejeitada
+# git push -u origin main 
+
+# Pull para integrar o histórico remoto, que abriu o editor Vim para o merge
+git pull origin main --allow-unrelated-histories
+# ":wq" utilizado para sair do editor vim 
+# Push da branch main bem-sucedido após o merge
+git push -u origin main
+
+# Push da tag v1.0 bem-sucedido
+git push origin v1.0
+
+# Comandos para adicionar e commitar o arquivo comandos.txt atualizado (estes virão depois que você salvar este arquivo)
+# git add comandos.txt
+# git commit -m "Atualiza comandos.txt com etapas finais de push e resolução de merge"
+# git push origin main
